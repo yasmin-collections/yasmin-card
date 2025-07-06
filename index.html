@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
-            rel="stylesheet">
-
-        <title>Collections by Yasmin - Digital Card</title>
-
-        <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
+    <title>Collections by Yasmin - Digital Card</title>
+    <style>
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         display: flex;
@@ -29,7 +29,7 @@
         background: #fffdd0;
         padding: 2rem;
         border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         max-width: 400px;
         width: 100%;
         box-sizing: border-box;
@@ -52,6 +52,9 @@
         margin: 0;
         text-align: center;
         color: #530303;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .about {
@@ -65,24 +68,33 @@
 
       .social-links {
         margin-top: 2rem;
+        display: grid;
+        gap: 0.6rem;
       }
 
       .row {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: grid;
         gap: 0.6rem;
-        margin-bottom: 0.8rem;
+      }
+
+      .row.first {
+        grid-template-columns: repeat(2, 1fr); /* Facebook & Instagram */
+      }
+
+      .row.second {
+        grid-template-columns: repeat(3, 1fr); /* Email, WhatsApp, Call */
       }
 
       .row a {
+        text-align: center;
         text-decoration: none;
         color: #fff;
         background-color: #530303;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.8rem;
         border-radius: 20px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         transition: background 0.3s ease;
+        white-space: nowrap;
       }
 
       .row a:hover {
@@ -93,53 +105,50 @@
         margin-right: 6px;
       }
     </style>
-    </head>
-    <body>
-        <div class="card">
-            <img src="Yasmeen Collections.png" alt="Collections by Yasmin" />
-            <h1>Collections by Yasmin</h1>
+  </head>
+  <body>
+    <div class="card">
+      <img src="Yasmeen Collections.png" alt="Collections by Yasmin" />
+      <h1>Collections by Yasmin</h1>
 
-            <div class="about">
-                🌸 <strong>About Us:</strong><br>
-                <strong>Collections by Yasmin</strong> has been a trusted name
-                in
-                fashion since <strong>2012</strong>,
-                offering premium <strong>unstitched clothing</strong> for
-                <strong>Men &amp;
-                    Women</strong>. Our collection
-                features <strong>embroidered suits</strong> and <strong>timeless
-                    styles</strong> for every occasion.<br>
-                Our motto: <strong>Keep it Simple</strong> — effortless, classy
-                fashion
-                for all. <br>
-                With over a decade of experience, we are known for
-                <strong>quality
-                    service</strong>, <strong>fine fabrics</strong>, and
-                <strong>fast
-                    delivery</strong>.
-            </div>
+      <div class="about">
+        🌸 <strong>About Us:</strong><br />
+        <strong>Collections by Yasmin</strong> has been a trusted name in
+        fashion since <strong>2012</strong>, offering premium
+        <strong>unstitched clothing</strong> for <strong>Men &amp; Women</strong
+        >. Our collection features <strong>embroidered suits</strong> and
+        <strong>timeless styles</strong> for every occasion.<br />
+        Our motto: <strong>Keep it Simple</strong> — effortless, classy fashion
+        for all. <br />
+        With over a decade of experience, we are known for
+        <strong>quality service</strong>, <strong>fine fabrics</strong>, and
+        <strong>fast delivery</strong>.
+      </div>
 
-            <div class="social-links">
-                <div class="row">
-                    <a
-                        href="https://www.instagram.com/collections_by_yasmin?igsh=MWFwZG94cDdqYzFrZA=="
-                        target="_blank"><i class="fab fa-instagram"></i>
-                        Instagram</a>
-                    <a href="https://www.facebook.com/share/15ZsD2B3QN/"
-                        target="_blank"> <i class="fab fa-facebook"></i>
-                        Facebook</a>
-                </div>
-                <div class="row">
-                    <a href="https://wa.me/923336753033" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="tel:+923336753033" target="_blank"><i
-                            class="fas fa-phone"></i> Call</a>
-                    <a href="mailto:yasmincollections7100@gmail.com"
-                        target="_blank"><i class="fas fa-envelope"></i>
-                        Email</a>
-                </div>
-            </div>
+      <div class="social-links">
+        <div class="row first">
+          <a href="https://www.facebook.com/share/15ZsD2B3QN/" target="_blank">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/collections_by_yasmin?igsh=MWFwZG94cDdqYzFrZA=="
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
         </div>
-    </body>
+        <div class="row second">
+          <a href="mailto:yasmincollections7100@gmail.com" target="_blank">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://wa.me/923336753033" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="tel:+923336753033" target="_blank">
+            <i class="fas fa-phone"></i> Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
