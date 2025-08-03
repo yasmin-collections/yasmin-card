@@ -38,8 +38,9 @@
       .card img {
         display: block;
         margin: 0 auto 1.2rem auto;
-        width: 130px;
-        height: 130px;
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 130px; /* Limit max width */
         object-fit: cover;
         border-radius: 50%;
         border: 4px solid #530303;
@@ -75,11 +76,11 @@
       }
 
       .row.first {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Facebook & Instagram */
       }
 
       .row.second {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Email, WhatsApp, Call */
       }
 
       .row a {
@@ -90,16 +91,32 @@
         padding: 0.5rem 0.8rem;
         border-radius: 20px;
         font-size: 0.85rem;
-        transition: background 0.3s ease;
+        transition: background 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
         white-space: nowrap;
       }
 
       .row a:hover {
         background-color: #800000;
+        transform: scale(1.05); /* Slightly enlarge on hover */
       }
 
       .social-links i {
         margin-right: 6px;
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 600px) {
+        .card h1 {
+          font-size: 1.4rem; /* Smaller font size for mobile */
+        }
+
+        .about {
+          font-size: 0.85rem; /* Smaller font size for mobile */
+        }
+
+        .row a {
+          font-size: 0.75rem; /* Smaller button text for mobile */
+        }
       }
     </style>
   </head>
